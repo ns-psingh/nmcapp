@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Nandini Marketing Company</string>
+    <string name="search_string">Search</string>
+    <string name="add_string">Add a new product</string>
 </resources>
