@@ -26,16 +26,19 @@ public class ProductModel {
     private String PendingPaymentVendorP;
     private String PendingPaymentVendorR;
 
-    public void setProductDetials(String ProductName,int ProductSerialNumber)
+    public void setProductDetails(String ProductName,int ProductSerialNumber)
     {
         this.ProductName=ProductName;
         this.ProductSerialNumber=ProductSerialNumber;
     }
 
-    public void setProductName(String ProductName)
-    {
-        this.ProductName= ProductName;
+    public void getProductDetails() {
+        System.out.println("Product Name=" + ProductName);
+        System.out.println("ProductSerialNumber=" + ProductSerialNumber);
+
     }
+
+
     public void  setVendorDetails(String VendorName, int VendorPhoneNumber, String VendorAddress, int vendorGSTNumber )
     {
         this.VendorName=VendorName;
@@ -44,12 +47,27 @@ public class ProductModel {
         this.vendorGSTNumber=vendorGSTNumber;
     }
 
+    public void  getVendorDetails()
+    {
+        System.out.println("VendorName=" +VendorName);
+        System.out.println("VendorPhoneNumber="+VendorPhoneNumber);
+        System.out.println("VendorAddress="+ VendorAddress);
+        System.out.println("VendorGSTNumber="+vendorGSTNumber);
+    }
+
     public void setPaymentHistory(int PaymentHistoryReceived,int PaymentHistorySent)
     {
         this.PaymentHistoryReceived=PaymentHistoryReceived;
         this.PaymentHistorySent=PaymentHistorySent;
 
     }
+    public void getPaymentHistory()
+    {
+        System.out.println("PaymentHistoryReceived="+PaymentHistoryReceived);
+        System.out.println("PaymentHistorySent="+PaymentHistorySent);
+    }
+
+
 
     public void setOrderHistory( int OrderDate,int OrderQuantity, String OrderVendorName, String OrderItem)
     {
@@ -58,6 +76,16 @@ public class ProductModel {
         this.OrderVendorName=OrderVendorName;
         this.OrderItem=OrderItem;
     }
+    public void getOrderHistory()
+    {
+        System.out.println("OrderDate="+OrderDate);
+        System.out.println("OrderQuantity="+OrderQuantity);
+        System.out.println("OrderVendorName="+OrderVendorName);
+        System.out.println("OrderItem="+OrderItem);
+
+    }
+
+
 
     public void setPendingOrder(String PendingOrderVendor,int Quantity,int PendingOrderItem)
     {
@@ -66,12 +94,28 @@ public class ProductModel {
         this.PendingOrderItem=PendingOrderItem;
     }
 
+    public void getPendingOrder()
+    {
+        System.out.println("PendingOrderVendor="+PendingOrderVendor);
+        System.out.println("Quantity="+Quantity);
+        System.out.println("PendingOrderItem="+PendingOrderItem);
+    }
+
+
     public void setPendingPayment(String PendingPaymentVendorP,int PendingPaymentDuePAmount,String PendingPaymentVendorR,int PendingPaymentDueRAmount)
     {
         this.PendingPaymentVendorP=PendingPaymentVendorP;
         this.PendingPaymentDuePAmount=PendingPaymentDuePAmount;
         this.PendingPaymentVendorR=PendingPaymentVendorR;
         this.PendingPaymentDueRAmount=PendingPaymentDueRAmount;
+    }
+
+    public void getPendingPayment()
+    {
+        System.out.println("PendingPaymentVendorP="+PendingPaymentVendorP);
+        System.out.println("PendingPaymentDuePAmount="+PendingPaymentDuePAmount);
+        System.out.println("PendingPaymentVendorR="+PendingPaymentVendorR);
+        System.out.println("PendingPaymentDueRAmount="+PendingPaymentDueRAmount);
     }
 
 
