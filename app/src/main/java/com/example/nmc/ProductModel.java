@@ -3,6 +3,7 @@ package com.example.nmc;
 public class ProductModel {
     private String ProductName;
     private int ProductSerialNumber;
+    private String ProductImageURL;
     private String VendorName;
     private int VendorPhoneNumber;
     private String VendorAddress;
