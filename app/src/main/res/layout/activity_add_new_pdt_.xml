@@ -8,7 +8,7 @@
     tools:context=".AddNewPdt_Activity">
 
     <TextView
-        android:id="@+id/PaymentHistory"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -32,7 +32,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/Psent"
+        android:id="@+id/editTextTextPersonName1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -55,18 +55,19 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/PRecieved"
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName" />
 
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="0.5" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +76,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/update"
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
