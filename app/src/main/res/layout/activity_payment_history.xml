@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddNewPdt_Activity">
+
+    <TextView
+        android:id="@+id/PaymentHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="Payment History"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="36sp" />
+
+
+    <TextView
+        android:id="@+id/PaySent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:text="Payment Sent"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/PSent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="Sentamount"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/PayRecieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Payment Recieved"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp" />
+
+
+    <EditText
+        android:id="@+id/PRecieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="Recievedamount"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="UPDATE" />
+
+    </LinearLayout>
+
+</LinearLayout>
