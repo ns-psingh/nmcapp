@@ -27,6 +27,8 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 public class AddNewPdt_Activity extends AppCompatActivity {
 
@@ -37,6 +39,7 @@ public class AddNewPdt_Activity extends AppCompatActivity {
     private TextView serial_warning;
     private EditText product_name;
     private EditText serial_number;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,12 @@ public class AddNewPdt_Activity extends AppCompatActivity {
                     String product_serial_number = serial_number.getText().toString();
                     StorageConnector storageConnector = new StorageConnector();
                     storageConnector.upload_file(filepath, product_serial_number, context, upload_progress);
+                    ProductModel productModel = new ProductModel();
+                    productModel.setProductDetails(product_name.getText().toString(), serial_number.getText().toString(), "");
+                    HashMap<String, Object> productModel_hashmap = new HashMap<>();
+                    productModel_hashmap = productModel.ConvertObjectToMap();
+                    DBConnector dbConnector = new DBConnector();
+                    dbConnector.add_product(productModel_hashmap);
                 }
                 if(product_name.getText().toString().equals(""))
                 {

@@ -2,6 +2,7 @@ package com.example.nmc;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -31,6 +32,7 @@ public class StorageConnector {
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 Toast.makeText(context, "File Uploaded", Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.INVISIBLE);
+                context.startActivity(new Intent(context, MainActivity.class));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
