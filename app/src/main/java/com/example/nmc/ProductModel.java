@@ -135,11 +135,7 @@ public class ProductModel {
         hashMap.put("PendingPaymentDueRAmount", object.PendingPaymentDueRAmount);
         hashMap.put("PendingPaymentVendorP", object.PendingPaymentVendorP);
         hashMap.put("PendingPaymentVendorR", object.PendingPaymentVendorR);
-
-        Iterator<Map.Entry<String, Object>> iterator = hashMap.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<String, Object> entry = iterator.next();
-            add_product(entry);
+        add_product(hashMap);
         }
     }
 }
