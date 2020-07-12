@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PendingPayment">
+
+    <TextView
+        android:id="@+id/pendingpayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="Pending payment"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/RPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="10dp"
+        android:paddingBottom="2dp"
+        android:text="Yet to be recieved"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/PayS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:text="Vendor Name"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/vname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/AmtDue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingTop="50dp"
+        android:paddingBottom="5dp"
+        android:text="Amount Due"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/PS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/update2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="UPDATE" />
+
+    </LinearLayout>
+
+</LinearLayout>
