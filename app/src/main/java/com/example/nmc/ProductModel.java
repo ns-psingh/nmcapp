@@ -37,10 +37,9 @@ public class ProductModel {
 
 
     public void getProductDetails() {
-        System.out.println("Product Name=" + ProductName);
-        System.out.println("ProductSerialNumber=" + ProductSerialNumber);
-        System.out.println("ProductImageURL" + ProductImageURL);
-
+        return(hashMap.get("ProductName"));
+        return(hashMap.get("ProductSerialNumber"));
+        return(hashMap.get("ProductImageURL"));
     }
 
 
@@ -52,10 +51,10 @@ public class ProductModel {
     }
 
     public void getVendorDetails() {
-        System.out.println("VendorName=" + VendorName);
-        System.out.println("VendorPhoneNumber=" + VendorPhoneNumber);
-        System.out.println("VendorAddress=" + VendorAddress);
-        System.out.println("VendorGSTNumber=" + vendorGSTNumber);
+        return(hashMap.get("VendorName"));
+        return(hashMap.get("VendorPhoneNumber"));
+        return(hashMap.get("VendorAddress="));
+        return(hashMap.get("VendorGSTNumber"));
     }
 
     public void setPaymentHistory(int PaymentHistoryReceived, int PaymentHistorySent) {
@@ -65,8 +64,9 @@ public class ProductModel {
     }
 
     public void getPaymentHistory() {
-        System.out.println("PaymentHistoryReceived=" + PaymentHistoryReceived);
-        System.out.println("PaymentHistorySent=" + PaymentHistorySent);
+        return(hashMap.get("PaymentHistoryReceived"));
+        return(hashMap.get("PaymentHistorySent"));
+
     }
 
 
@@ -78,11 +78,10 @@ public class ProductModel {
     }
 
     public void getOrderHistory() {
-        System.out.println("OrderDate=" + OrderDate);
-        System.out.println("OrderQuantity=" + OrderQuantity);
-        System.out.println("OrderVendorName=" + OrderVendorName);
-        System.out.println("OrderItem=" + OrderItem);
-
+        return(hashMap.get("OrderDate"));
+        return(hashMap.get("OrderQuantity"));
+        return(hashMap.get("OrderVendorName"));
+        return(hashMap.get("OrderItem"));
     }
 
 
@@ -93,9 +92,10 @@ public class ProductModel {
     }
 
     public void getPendingOrder() {
-        System.out.println("PendingOrderVendor=" + PendingOrderVendor);
-        System.out.println("Quantity=" + Quantity);
-        System.out.println("PendingOrderItem=" + PendingOrderItem);
+        return(hashMap.get("PendingOrderVendor"));
+        return(hashMap.get("Quantity"));
+        return(hashMap.get("PendingOrderItem"));
+
     }
 
 
@@ -107,10 +107,12 @@ public class ProductModel {
     }
 
     public void getPendingPayment() {
-        System.out.println("PendingPaymentVendorP=" + PendingPaymentVendorP);
-        System.out.println("PendingPaymentDuePAmount=" + PendingPaymentDuePAmount);
-        System.out.println("PendingPaymentVendorR=" + PendingPaymentVendorR);
-        System.out.println("PendingPaymentDueRAmount=" + PendingPaymentDueRAmount);
+        return(hashMap.get("PendingPaymentVendorP"));
+        return(hashMap.get("PendingPaymentDuePAmount"));
+        return(hashMap.get("PendingPaymentVendorR"));
+        return(hashMap.get("PendingPaymentDueRAmount"));
+
+
     }
 
 
@@ -122,6 +124,8 @@ public class ProductModel {
         hashMap.put("ProductImageURL", object.ProductImageURL);
         hashMap.put("VendorName", object.VendorName);
         hashMap.put("VendorAddress", object.VendorAddress);
+        hashMap.put("VendorPhoneNumber", object.VendorPhoneNumber);
+
         hashMap.put("vendorGSTNumber", object.vendorGSTNumber);
         hashMap.put("PaymentHistoryReceived", object.PaymentHistoryReceived);
         hashMap.put("PaymentHistorySent", object.PaymentHistorySent);
@@ -131,6 +135,8 @@ public class ProductModel {
         hashMap.put("OrderItem", object.OrderItem);
         hashMap.put("PendingOrderVendor", object.PendingOrderVendor);
         hashMap.put(" PendingOrderItem", object.PendingOrderItem);
+        hashMap.put(" Quantity", object.Quantity);
+
         hashMap.put("PendingPaymentDuePAmount", object.PendingPaymentDuePAmount);
         hashMap.put("PendingPaymentDueRAmount", object.PendingPaymentDueRAmount);
         hashMap.put("PendingPaymentVendorP", object.PendingPaymentVendorP);
