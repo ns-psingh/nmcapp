@@ -32,7 +32,9 @@ public class StorageConnector {
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 Toast.makeText(context, "File Uploaded", Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.INVISIBLE);
-                context.startActivity(new Intent(context, MainActivity.class));
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
