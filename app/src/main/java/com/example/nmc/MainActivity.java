@@ -13,11 +13,34 @@ import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity {
 
+    ListView listView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        listView = (ListView)findViewById(R.id.listview);
+
+        ArrayList<String> arrayList= new ArrayList<>();
+
+        arrayList.add("Vendor Details");
+        arrayList.add("Payment History");
+        arrayList.add("Order History");
+        arrayList.add("Pending Order");
+        arrayList.add("Pending Payment");
+
+
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this,android.layout.activity_list_of,arrayList);
+        listView.setAdapter(adapter);
+
+
+
+
+
+
         Button add_new_pdt_btn = (Button) findViewById(R.id.add_new_pdt_btn);
         add_new_pdt_btn.setOnClickListener(new View.OnClickListener() {
             @Override
