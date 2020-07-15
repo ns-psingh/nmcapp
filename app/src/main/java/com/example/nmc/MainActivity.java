@@ -17,14 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
     private DBConnector dbConnector;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView listview = (ListView) findViewById(R.id.product_list);
-        listview = (ListView) findViewById(R.id.product_list);
-        dbConnector = new DBConnector();
-        dbConnector.get_products(getApplicationContext(), listview);
+
+
         Button add_new_pdt_btn = (Button) findViewById(R.id.add_new_pdt_btn);
         add_new_pdt_btn.setOnClickListener(new View.OnClickListener() {
             @Override
