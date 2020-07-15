@@ -1,6 +1,8 @@
 package com.example.nmc;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 
@@ -39,7 +41,7 @@ public class DBConnector {
         });
     }
 
-    public void get_products()
+    public void get_products(final Context context, final ListView listView)
     {
         db.collection("product_details").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -58,6 +60,13 @@ public class DBConnector {
                 {
                     Log.w("d", "Error getting documents", task.getException());
                 }
+                ArrayList<ProductModel> productlist = new ArrayList<ProductModel>();
+                for(Map<String, Object> product: products)
+                {
+                    productlist.add(ProductModel.convertMapToObject(product));
+                }
+                PdtList_Adapter adapter = new PdtList_Adapter(productlist,context);
+                listView.setAdapter(adapter);
                 Log.d("d","Products are " + products);
             }
         });
