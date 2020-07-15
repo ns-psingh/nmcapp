@@ -1,6 +1,7 @@
 package com.example.nmc;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ProductModel {
     private String ProductName;
@@ -176,6 +177,14 @@ public class ProductModel {
         hashMap.put("PendingPaymentVendorP", this.PendingPaymentVendorP);
         hashMap.put("PendingPaymentVendorR", this.PendingPaymentVendorR);
         return hashMap;
+        }
+
+        public static ProductModel convertMapToObject(Map<String, Object> hashMap)
+        {
+            ProductModel productModel = new ProductModel();
+            productModel.setProductDetails((String) hashMap.get("ProductName"), (String) hashMap.get("ProductSerialNumber"), (String) hashMap.get("ProductImageURL"));
+            // add all details in seperate issue
+            return productModel;
         }
     }
 
